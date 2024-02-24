@@ -4,16 +4,12 @@ import datetime
 import time
 
 
-z = True
-
-
 start = time.time()
 # displaying date and time in a regular string format
-while z:
+while True:
     
     if (time.time() > start + 9):
         #collect data from url
-
         http = urllib3.PoolManager()
         req = http.request('GET', "http://api.open-notify.org/iss-now.json")
 
